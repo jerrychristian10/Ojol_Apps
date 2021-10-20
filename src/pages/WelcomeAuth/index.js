@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import ActionButton from './ActionButton';
+import { colors } from '../../utils';
+import { welcomeAuth } from '../../assets';
 
 const WelcomeAuth =() => {
     return(
         <View 
-        style={styles.wrapper.page}>
-            <View style ={styles.wrapper.illustration} />
-            <Text style={styles.text.welcome}>
-            Selamat Datang di GO-JOL
-            </Text>
+        style = {styles.wrapper.page}>
+            <Image source={welcomeAuth} style={styles.wrapper.illustration} />
+            <Text style = {styles.text.welcome}>Selamat Datang di GO-JOL</Text>
             <ActionButton desc="Silahkan login, jika anda telah memiliki akun" title="Masuk"/>
             <ActionButton desc="Silahkan pilih register jika anda belum memiliki akun" title="Daftar"/>
         </View>
@@ -27,18 +27,18 @@ const styles = {
         illustration:{
             height: 163,
             width: 298,
-            backgroundColor: '#ffa502',
             marginBottom: 11
             }, 
+        },   
     text:{
         welcome:{
             fontSize: 20,
             fontWeight: 'bold',
-            color: '#ffa502',
+            color: colors.default,
             marginBottom: 88
             },
-    },           
-    },
-};
+        },           
+    };
+
 
 export default WelcomeAuth;
