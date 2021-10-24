@@ -4,7 +4,12 @@ import { colors } from '../../../utils';
 
 const Input = ({placeholder}) => {
     return (
-        <TextInput style={styles.input} placeholder={placeholder} placeholderTextColor={colors.default}/>
+        <TextInput 
+        style={styles.input} 
+        placeholder={placeholder} 
+        placeholderTextColor={colors.default}
+            
+        />
         );
 
 };
